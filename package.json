@@ -1,0 +1,23 @@
+{
+  "name": "generators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fazouane-marouane/Generators.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fazouane-marouane/Generators/issues"
+  },
+  "homepage": "https://github.com/fazouane-marouane/Generators#readme",
+  "devDependencies": {
+    "esm": "^3.0.54"
+  }
+}
