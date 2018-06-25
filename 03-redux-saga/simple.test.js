@@ -47,11 +47,9 @@ describe("Simple redux-saga program", () => {
     const firstForkEffect = gen.next();
     expect(firstForkEffect.value["@@redux-saga/IO"]).toBe(true);
     expect(firstForkEffect.value["FORK"]).toBeTruthy();
-    const firstFork = firstForkEffect.value.FORK.fn();
     const secondForkEffect = gen.next(createMockTask());
     expect(secondForkEffect.value["@@redux-saga/IO"]).toBe(true);
     expect(secondForkEffect.value["FORK"]).toBeTruthy();
-    const secondFork = secondForkEffect.value.FORK.fn();
     const joinEffect = gen.next(createMockTask());
     expect(joinEffect.value["@@redux-saga/IO"]).toBe(true);
     expect(joinEffect.value["ALL"]).toBeTruthy();
