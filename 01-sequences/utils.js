@@ -1,18 +1,18 @@
-export function* take(sequence, count) {
+exports.take = function*(sequence, count) {
   if (count <= 0) return;
-  for (let item of sequence) {
+  for (const item of sequence) {
     yield item;
     count--;
     if (count === 0) return;
   }
-}
+};
 
-export function* reverse(sequence) {
+exports.reverse = function*(sequence) {
   const cachedValues = Array.from(sequence).reverse();
   yield* cachedValues;
-}
+};
 
-export function* zip(sequence_left, sequence_right) {
+exports.zip = function*(sequence_left, sequence_right) {
   while (true) {
     const iteration_left = sequence_left.next();
     if (iteration_left.done) return;
@@ -20,13 +20,13 @@ export function* zip(sequence_left, sequence_right) {
     if (iteration_right.done) return;
     yield [iteration_left.value, iteration_right.value];
   }
-}
+};
 
-export function first(sequence) {
+exports.first = function(sequence) {
   return sequence.next().value;
-}
+};
 
-export function last(sequence) {
+exports.last = function(sequence) {
   let result = undefined;
   while (true) {
     let iteration = sequence.next();
@@ -35,4 +35,4 @@ export function last(sequence) {
     }
     result = iteration.value;
   }
-}
+};
