@@ -1,0 +1,15 @@
+#game-container {
+  position: relative;
+  border: 1px solid red;
+  height: 300px;
+  width: 170px;
+  box-sizing: content-box;
+}
+#game-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px black solid;
+  box-sizing: border-box;
+  height: 300px;
+}

@@ -97,7 +97,6 @@ describe("yield as await", () => {
     expect(spy).toHaveBeenCalledTimes(2);
     expect(spy).toHaveBeenCalledWith("Hello world");
     expect(spy).toHaveBeenCalledWith("😕+🍪=😊");
-    expect(spy).toHaveBeenCalledWith("😕+🍪=😊");
   });
 
   it("Pilot the generator using plain promises", async () => {
